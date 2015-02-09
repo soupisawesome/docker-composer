@@ -11,6 +11,7 @@ RUN apt-get update -y && \
 	apt-get remove --purge curl -y && \
 	apt-get clean
 
+RUN php5enmod mcrypt
 RUN mkdir -p /data/www
 
 VOLUME ["/data"]
